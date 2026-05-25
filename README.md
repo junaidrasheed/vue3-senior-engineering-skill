@@ -45,11 +45,19 @@ This skill elevates Claude's Vue 3 capabilities beyond basic code generation. It
 3. Upload the `.skill` file
 4. The skill is now available in all conversations
 
-### Option 2: Manual Installation (Copy Folder)
+
+### Option 2: Install via npx
+
+If you already use npx to manage Skills on your machine or within your projects, run the following command to add this Skill to your preferred agent:
+
+`npx add skill https://github.com/junaidrasheed/vue3-senior-engineering-skill`
+
+
+### Option 3: Manual Installation (Copy Folder)
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/vue3-senior-engineering-skill.git
+   git clone https://github.com/junaidrasheed/vue3-senior-engineering-skill
    ```
 
 2. Copy the skill folder to Claude's custom skills directory:
@@ -66,9 +74,6 @@ This skill elevates Claude's Vue 3 capabilities beyond basic code generation. It
 
 3. Restart Claude and the skill will be available
 
-### Option 3: Use as Reference
-
-Simply reference this repository when discussing Vue 3 architecture with Claude. The patterns and examples serve as a guide for best practices.
 
 ## How to Use
 
