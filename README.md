@@ -104,14 +104,41 @@ The skill automatically triggers when you:
 
 ```
 vue3-senior-engineering/
-├── SKILL.md                          # Core skill definition & patterns
+├── SKILL.md                          # Entry point: patterns + reference map
 ├── references/
-│   ├── architecture-guide.md         # Folder structure & project organization
-│   ├── tooling-conventions.md        # ESLint, TypeScript, Prettier rules
-│   └── examples/                     # Code examples & templates
-├── REVIEW_SUMMARY.md                 # Evolution & optimization history
+│   ├── architecture/                 # Engineering standards (10 topic files + README)
+│   │   ├── core-principles.md
+│   │   ├── component-architecture.md
+│   │   ├── sfc-structure.md
+│   │   ├── state-management.md
+│   │   ├── data-flow.md
+│   │   ├── code-organization.md
+│   │   ├── performance.md
+│   │   ├── testing.md
+│   │   ├── composables.md
+│   │   ├── code-quality.md
+│   │   └── anti-patterns.md
+│   ├── tooling/                      # Team conventions (7 topic files + README)
+│   │   ├── testing-stack.md
+│   │   ├── http-api.md
+│   │   ├── validation-error-handling.md
+│   │   ├── date-utilities.md
+│   │   ├── styling.md
+│   │   ├── build-environment.md
+│   │   └── nuxt-patterns.md
+│   ├── vue-core/                     # Vue runtime deep-dives (5 topic files + README)
+│   │   ├── reactivity.md
+│   │   ├── adaptable-composables.md
+│   │   ├── builtin-components.md
+│   │   ├── provide-inject-and-refs.md
+│   │   └── ssr-hydration.md
+│   ├── routing/                      # Vue Router
+│   │   └── vue-router.md
+│   └── examples/                     # Runnable code examples & templates
 └── README.md                         # This file
 ```
+
+Each folder has a `README.md` index describing when to load each topic file (progressive disclosure).
 
 ## Key Principles
 
@@ -172,13 +199,13 @@ vue3-senior-engineering/
 
 ## Examples & References
 
-See the `references/examples/` directory for:
-- Complete component examples
-- Pinia store patterns
-- Composable patterns
-- Form handling implementation
-- API service setup
-- Testing examples
+See the [`references/examples/`](references/examples/README.md) directory for:
+- Component examples (base, presentational, feature) — all following the SFC conventions: `<template>` → `<script>` → `<style>`, script grouped by logical concern
+- Pinia store patterns (`ProductStore.ts`)
+- Composable patterns (`useFetchProducts.ts`)
+- Adaptable composable with `MaybeRefOrGetter` (`useDocumentTitle.ts`)
+
+> Authoring convention: see [SFC Structure](references/architecture/sfc-structure.md).
 
 ## Contributing
 
@@ -218,9 +245,11 @@ Created for senior Vue 3 engineers building production applications with Claude.
 
 ## Quick Links
 
-- [SKILL.md](SKILL.md) — Full skill documentation and patterns
-- [Architecture Guide](references/architecture-guide.md) — Project structure and organization
-- [Tooling Conventions](references/tooling-conventions.md) — ESLint, TypeScript, Prettier setup
+- [SKILL.md](SKILL.md) — Entry point: full patterns and the reference map
+- [Architecture](references/architecture/README.md) — Engineering standards, split by topic
+- [Tooling](references/tooling/README.md) — Testing, HTTP, validation, styling, build, Nuxt
+- [Vue Core](references/vue-core/README.md) — Reactivity, composables, built-ins, provide/inject, SSR
+- [Routing](references/routing/vue-router.md) — Vue Router guards & lifecycle
 - [Examples](references/examples/) — Real-world code examples
 
 ---
